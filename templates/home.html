@@ -20,7 +20,6 @@
               <a class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus"></i></a>
               <ul class="list-group">
                 {% for task in tasks %}
-                    <small class="text-muted">{{ task.updated_at | timesince }}</small>
                   <div class="input-group my-1">
                     <input type="text" class="form-control" placeholder="{{ task.task }}" readonly />
                     <a class="btn btn-success" href="{% url 'mark_done' task.id %}"><i class="bi bi-check"></i></a>
